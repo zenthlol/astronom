@@ -1,0 +1,456 @@
+a{
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* NAVIGATION BAR */
+nav{
+    width: 100%;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8407738095238095) 80%, rgba(255,255,255,0) 100%);
+    padding: 28px 80px;
+    position: fixed;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-left{
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 96px;
+
+}
+
+
+
+.nav-menu{
+    text-decoration: none;
+}
+
+.nav-menu > *:not(:first-child){
+    margin-left: 48px;
+}
+
+.nav-contact a,
+.getintouch-contact a{
+    padding: 6px 24px;
+    border-radius: 40px;
+    background-color: grey;
+}
+
+
+/* LANDING PAGE */
+
+#Hero{
+    background: url(/Asset/planets-bg.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.hero-content h1{
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 72px;
+    text-align: center;
+}
+
+.hero-content p{
+    color: whitesmoke;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 24px;
+}
+
+.hero-contents{
+    padding: 6px 24px;
+    border-radius: 40px;
+    background-color: grey;
+    position: absolute;
+    bottom: 130px;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* About Us */
+#AboutUs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 160px;
+    background: rgb(34, 34, 34);
+    height: 50vh;
+}
+
+.hr-aboutus{
+    width: 1000px;
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.about-container p,
+.about-container h1{
+    text-align: center;
+    color: whitesmoke;
+}
+
+.about-container h1{
+    font-size: 64px;
+    font-family: sans-serif;
+}
+
+.about-container p{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+#Work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 80px;
+    background-color: rgb(34, 34, 34);
+    padding-bottom: 100px;
+}
+
+.work-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    margin-top: 100px;
+    color: white;
+}
+
+.work-container h1{
+    font-family: sans-serif;
+    font-size: 64px;
+    color: white;
+}
+
+.hr-contents{
+    width: 1000px;
+    margin-bottom: 25px;
+}
+
+/* CARDS */
+.work-cardholder{
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+
+.card{
+    display: flex;
+    color: whitesmoke;
+    
+    background-size: cover;
+    padding: 0px 0px 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+
+    transition: transform 500ms ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-content{
+    align-items: center;
+    padding: 30px;
+    background: hsl(0 0% 0% / 0.5);
+    transform: translateY(60%);
+    transition: transform 500ms ease;
+    max-width: 450px;
+}
+
+.card-content p{
+    margin-top: 20px;
+}
+
+.card-content h2{
+    padding-bottom: 5px;
+}
+
+.card:hover .card-content{
+    transform: translateY(0);
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+    
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: calc(100px * -1);
+    bottom: 0;
+    width: calc(100% + 150px);
+    background: greenyellow;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after{
+    transform: scaleX(1);
+}
+
+.card-body{
+    color: rgb(255 255 255 / 0.85);
+}
+
+.button{
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: greenyellow;
+    padding: 0.5em 1.25em;
+    border-radius: 5px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: whitesmoke;
+}
+
+/* Get in TOuch */
+#GetInTouch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(34, 34, 34);
+
+}
+
+.getintouch-container{
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 64px;
+    height: 50vh;
+}
+
+.getintouch-container h1,
+.getintouch-container p{
+    color: whitesmoke;
+}
+
+
+
+.getintouch-container h1{
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+.getintouch-container p{
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.getintouch-contact a{
+    font-size: 20px;
+}
+
+/* Contact Us */
+#ContactUs{
+    background: url(/Asset/planets-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+
+.contact-form{
+    margin-top: 50px;
+}
+
+.contact-container,
+.contact-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-heading{
+    gap: 16px;
+}
+
+.contact-heading h1{
+    color: whitesmoke;
+    font-size: 64px;
+    font-family: sans-serif;
+}
+
+.contact-heading p{
+    color: whitesmoke;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.contact-fill{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-bg{
+    background-color: rgba(228, 228, 228, 0.5);
+    padding: 48px 64px;
+    border-radius: 20px;
+}
+
+.form-bg > *:not(first-child){
+    margin-top: 24px;
+}
+
+.contact-fill label{
+    color: whitesmoke;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.contact-fill input,
+.contact-fill textarea{
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 12px 24px;
+    width: 500px;
+    font-family: sans-serif;
+}
+
+.submitBtn{
+    background: rgba(228, 228, 228, 0.5);
+    color: whitesmoke;
+    font-family: sans-serif;
+    border-radius: 50px;
+    border: none;
+    padding: 12px 48px;
+}
+
+
+
+/* Footer */
+#Footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+}
+
+.vertical-barrier{
+    width: 3px;
+    background-color: black;
+    margin-left: 40px;
+}
+
+.footer-precontainer{
+    display: flex;
+    font-family: sans-serif;
+    color: rgb(34, 34, 34);
+    align-items: left;
+    padding: 30px 50px;
+    gap: 0px;
+    font-size: 50px;
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    
+}
+
+.footer-content{
+    display: flex;
+    
+    align-items: center;
+    gap: 20px;
+}
+
+
+.footer-container p{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+    
+}
+
+.footer-icon{
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-icon > *:not(:first-child){
+    margin-left: 60px;;
+    
+}
+
+#downFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.downFooter{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+}
